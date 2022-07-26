@@ -56,7 +56,7 @@
     </table>
     <script>
       async function start() {
-        const result = await fetch(window.location.href.replace("/index.html", "/lecturers.json"))
+        const result = await fetch("https://github.com/topazrn/list-lecturer-ganda-bn22/blob/main/lecturers.json")
         const classes = await result.json()
         const tbody = document.querySelector("tbody")
         classes.forEach((_class) => {
