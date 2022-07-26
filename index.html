@@ -56,9 +56,8 @@
     </table>
     <script>
       async function start() {
-        const result = await fetch("/lecturers.json")
+        const result = await fetch(window.location.href.replace("/index.html", "/lecturers.json"))
         const classes = await result.json()
-        console.log(classes)
         const tbody = document.querySelector("tbody")
         classes.forEach((_class) => {
           _class.Lecturers.forEach((lecturer) => {
